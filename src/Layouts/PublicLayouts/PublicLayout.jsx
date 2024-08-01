@@ -6,7 +6,7 @@ function PublicLayout(props) {
     return (
         <React.Fragment>
             <Header />
-            <div>
+            <div className="main-content mb-3">
                 {props.children}
             </div>
             <Footer />
