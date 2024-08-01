@@ -1,17 +1,16 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-
-import Router from './router/router.jsx'
+import React, { useState } from "react";
+import Routes from "./Routes/index";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
 
   return (
-    <>
-        <Router />
-    </>
-  )
+    <React.Fragment>
+      <Routes />
+      <button onClick={() => setCount(count + 1)}>Click me</button>
+      <p>Count: {count}</p>
+    </React.Fragment>
+  );
 }
 
-export default App
+export default App;
