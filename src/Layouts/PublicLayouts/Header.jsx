@@ -16,9 +16,9 @@ function Header(args) {
       <header id="page-topbar" style={{ backgroundColor: "#e3e8ec" }}>
         <div className="navbar-header">
           <div className="d-flex">
-            <div className="navbar-brand-box text-center">
+            <div className="navbar-brand-box text-center text-info">
 
-              <Link to="/" className="logo">
+              <Link to="/" className="logo text-">
                 <span className="logo-sm">
                   <img src={logoSm} alt="logo-sm-light" height="42" />
                 </span>
@@ -32,37 +32,46 @@ function Header(args) {
 
 
           <div>
-            <Navbar {...args}>
-              <NavbarBrand href="/">reactstrap</NavbarBrand>
+            <Navbar >
+              <NavbarBrand href="/">Home</NavbarBrand>
+              <NavbarBrand href="/contact">Contact</NavbarBrand>
+              <NavbarBrand href="/about">About Us</NavbarBrand>
               <NavbarToggler onClick={toggle} />
               <Collapse isOpen={isOpen} navbar>
-                <Nav className="me-auto" navbar>
+                <Nav className="mr-auto" navbar>
                   <NavItem>
-                    <NavLink href="/components/">Components</NavLink>
+                    <NavLink href="/about">About</NavLink>
                   </NavItem>
                   <NavItem>
-                    <NavLink href="https://github.com/reactstrap/reactstrap">
-                      GitHub
-                    </NavLink>
+                    <NavLink href="/contact">Contact</NavLink>
                   </NavItem>
                   <UncontrolledDropdown nav inNavbar>
                     <DropdownToggle nav caret>
-                      Options
+                      More
                     </DropdownToggle>
                     <DropdownMenu right>
-                      <DropdownItem>Option 1</DropdownItem>
-                      <DropdownItem>Option 2</DropdownItem>
-                      <DropdownItem divider />
-                      <DropdownItem>Reset</DropdownItem>
+                      <DropdownItem>
+                        <Link to="/events">Events</Link>
+                      </DropdownItem>
+                      <DropdownItem>
+                        <Link to="/gallery">Gallery</Link>
+                      </DropdownItem>
+                      <DropdownItem>
+                        <Link to="/blog">Blog</Link>
+                      </DropdownItem>
                     </DropdownMenu>
                   </UncontrolledDropdown>
                 </Nav>
                 <NavbarText>Simple Text</NavbarText>
               </Collapse>
+
+
             </Navbar>
           </div>
         </div>
       </header>
+
+
     </React.Fragment>
   )
 }

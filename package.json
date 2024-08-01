@@ -12,6 +12,7 @@
     "deploy": "vite build && firebase deploy"
   },
   "dependencies": {
+    "@mdi/react": "^1.6.1",
     "bootstrap": "^5.3.3",
     "node-sass": "^9.0.0",
     "react": "^18.3.1",
