@@ -22,3 +22,14 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+./build
+./dist
+./dist-ssr
+
+# Node
+node_modules
+npm-debug.log
+yarn-error.log
+
+.firebase
