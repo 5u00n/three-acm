@@ -37,33 +37,7 @@ function Header(args) {
               <NavbarBrand href="/contact">Contact</NavbarBrand>
               <NavbarBrand href="/about">About Us</NavbarBrand>
               <NavbarToggler onClick={toggle} />
-              <Collapse isOpen={isOpen} navbar>
-                <Nav className="mr-auto" navbar>
-                  <NavItem>
-                    <NavLink href="/about">About</NavLink>
-                  </NavItem>
-                  <NavItem>
-                    <NavLink href="/contact">Contact</NavLink>
-                  </NavItem>
-                  <UncontrolledDropdown nav inNavbar>
-                    <DropdownToggle nav caret>
-                      More
-                    </DropdownToggle>
-                    <DropdownMenu right>
-                      <DropdownItem>
-                        <Link to="/events">Events</Link>
-                      </DropdownItem>
-                      <DropdownItem>
-                        <Link to="/gallery">Gallery</Link>
-                      </DropdownItem>
-                      <DropdownItem>
-                        <Link to="/blog">Blog</Link>
-                      </DropdownItem>
-                    </DropdownMenu>
-                  </UncontrolledDropdown>
-                </Nav>
-                <NavbarText>Simple Text</NavbarText>
-              </Collapse>
+
 
 
             </Navbar>
