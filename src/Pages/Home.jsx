@@ -1,6 +1,11 @@
 import React from 'react'
-import LOGO from "../assets/cropped-3acm.png";
+import LOGO from "../assets/logo.svg";
 import { Container, UncontrolledCarousel } from 'reactstrap';
+
+import Slider1 from '../assets/images/slider/1.jpg';
+import Slider2 from '../assets/images/slider/2.jpg';
+import Slider3 from '../assets/images/slider/3.jpg';
+import Slider4 from '../assets/images/slider/4.jpg';
 
 export default function Home() {
   return (
@@ -13,28 +18,36 @@ export default function Home() {
           </div>
           <h2 className='text-center text-info'>Youth Volunteering for His cause in the Last Days</h2>
 
-          <UncontrolledCarousel
-            items={[
-              {
-                altText: 'Slide 1',
-                caption: 'Slide 1',
-                key: 1,
-                src: 'https://picsum.photos/id/123/1200/600'
-              },
-              {
-                altText: 'Slide 2',
-                caption: 'Slide 2',
-                key: 2,
-                src: 'https://picsum.photos/id/456/1200/600'
-              },
-              {
-                altText: 'Slide 3',
-                caption: 'Slide 3',
-                key: 3,
-                src: 'https://picsum.photos/id/678/1200/600'
-              }
-            ]}
-          />
+          <div className='rounded'>
+            <UncontrolledCarousel className='rounded'
+              items={[
+                {
+                  altText: 'Slide 1',
+                  caption: 'Slide 1',
+                  key: 1,
+                  src: Slider1
+                },
+                {
+                  altText: 'Slide 2',
+                  caption: 'Slide 2',
+                  key: 2,
+                  src: Slider2
+                },
+                {
+                  altText: 'Slide 3',
+                  caption: 'Slide 3',
+                  key: 3,
+                  src: Slider3
+                },
+                {
+                  altText: 'Slide 4',
+                  caption: 'Slide 4',
+                  key: 4,
+                  src: Slider4
+                }
+              ]}
+            />
+          </div>
 
         </Container>
       </div>
