@@ -14,7 +14,7 @@ export default function Home() {
         <Container>
           <div className='d-flex align-items-center justify-content-center'>
             <img src={LOGO} alt="logo" height="70" className='m-2' />
-            <h1 className='my-auto text-info' height="70"  >3 ANGELS' CALL MINISTRY</h1>
+            <h1 className='my-auto text-info' height="70"  >3 ANGELS' CALL MINISTRY (3acm)</h1>
           </div>
           <h2 className='text-center text-info'>Youth Volunteering for His cause in the Last Days</h2>
 

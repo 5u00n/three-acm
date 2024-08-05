@@ -36,10 +36,6 @@ function Header(args) {
               <NavbarBrand href="/">Home</NavbarBrand>
               <NavbarBrand href="/contact">Contact</NavbarBrand>
               <NavbarBrand href="/about">About Us</NavbarBrand>
-              <NavbarToggler onClick={toggle} />
-
-
-
             </Navbar>
           </div>
         </div>
