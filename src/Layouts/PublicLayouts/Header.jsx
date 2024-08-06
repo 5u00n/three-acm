@@ -36,6 +36,7 @@ function Header(args) {
               <NavbarBrand href="/">Home</NavbarBrand>
               <NavbarBrand href="/contact">Contact</NavbarBrand>
               <NavbarBrand href="/about">About Us</NavbarBrand>
+              <NavbarBrand href="https://www.facebook.com/3angelscallministry/"><i className=' mdi mdi-facebook'></i></NavbarBrand>
             </Navbar>
           </div>
         </div>
