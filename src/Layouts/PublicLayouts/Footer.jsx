@@ -1,31 +1,22 @@
-import React from 'react';
-import { Container, Row, Col } from "reactstrap";
+import { Footer } from "flowbite-react";
+import { BsDribbble, BsFacebook, BsGithub, BsInstagram, BsTwitter } from "react-icons/bs";
 
-function Footer() {
-
-  // Inline style for the footer container to ensure it sticks to the bottom
-  const footerStyle = {
-    marginTop: 'auto', // This pushes the footer to the bottom of the flex container
-  };
-
-
+function footer() {
   return (
-    <React.Fragment>
-      <footer className="footer" style={footerStyle}>
-        <Container fluid={true}>
-          <Row>
-            <Col sm={6}>{new Date().getFullYear()} © 3am.org</Col>
-            <Col sm={6}>
-              <div className="text-sm-end d-none d-sm-block">
-                Created with <i className="mdi mdi-heart text-danger"></i> by
-                <a href="https://github.com/5u00n">{" projectopel"}</a>
-              </div>
-            </Col>
-          </Row>
-        </Container>
-      </footer>
-    </React.Fragment>
-  )
+    <Footer>
+      <div className="w-full sm:flex sm:items-center sm:justify-between p-3">
+        <Footer.Copyright href="#" by="3ACM" year={new Date().getFullYear()} />
+        <div className="mt-4 flex space-x-6 sm:mt-0 sm:justify-center">
+          <Footer.Icon href="#" icon={BsFacebook} />
+          <Footer.Icon href="#" icon={BsInstagram} />
+          <Footer.Icon href="#" icon={BsTwitter} />
+          <Footer.Icon href="#" icon={BsGithub} />
+          <Footer.Icon href="#" icon={BsDribbble} />
+        </div>
+      </div>
+    </Footer>
+
+  );
 }
 
-export default Footer;
+export default footer;

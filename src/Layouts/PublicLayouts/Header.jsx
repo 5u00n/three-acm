@@ -1,9 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import logoSm from '../../assets/logo.svg';
-import { Navbar, NavbarBrand, NavbarToggler, Collapse, Nav, NavItem, NavLink, UncontrolledDropdown, DropdownToggle, DropdownMenu, DropdownItem, NavbarText } from 'reactstrap';
 import { useState } from 'react';
-
+import { Navbar } from "flowbite-react";
 
 
 function Header(args) {
@@ -12,38 +11,24 @@ function Header(args) {
   const toggle = () => setIsOpen(!isOpen);
 
   return (
-    <React.Fragment>
-      <header id="page-topbar" style={{ backgroundColor: "#e3e8ec" }}>
-        <div className="navbar-header">
-          <div className="d-flex">
-            <div className="navbar-brand-box text-center text-info">
-
-              <Link to="/" className="logo text-">
-                <span className="logo-sm">
-                  <img src={logoSm} alt="logo-sm-light" height="42" />
-                </span>
-                <span className="logo-lg">
-                  <img src={logoSm} alt="logo-light" height="44" />
-                  <label className="m-2 font-size-16">{"3ACM"}</label>
-                </span>
-              </Link>
-            </div>
-          </div>
-
-
-          <div>
-            <Navbar >
-              <NavbarBrand href="/">Home</NavbarBrand>
-              <NavbarBrand href="/contact">Contact</NavbarBrand>
-              <NavbarBrand href="/about">About Us</NavbarBrand>
-              <NavbarBrand href="https://www.facebook.com/3angelscallministry/"><i className=' mdi mdi-facebook'></i></NavbarBrand>
-            </Navbar>
-          </div>
-        </div>
-      </header>
-
-
-    </React.Fragment>
+    <Navbar fluid rounded>
+      <Navbar.Brand as={Link} href="https://flowbite-react.com">
+        <img src={logoSm} className="mr-3 h-6 sm:h-9" alt="Flowbite React Logo" />
+        <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">3ACM</span>
+      </Navbar.Brand>
+      <Navbar.Toggle />
+      <Navbar.Collapse>
+        <Navbar.Link href="#" active>
+          Home
+        </Navbar.Link>
+        <Navbar.Link as={Link} href="#">
+          About
+        </Navbar.Link>
+        <Navbar.Link href="#">Services</Navbar.Link>
+        <Navbar.Link href="#">Pricing</Navbar.Link>
+        <Navbar.Link href="#">Contact</Navbar.Link>
+      </Navbar.Collapse>
+    </Navbar>
   )
 }
 

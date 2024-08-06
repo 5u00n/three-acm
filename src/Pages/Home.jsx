@@ -1,6 +1,6 @@
 import React from 'react'
 import LOGO from "../assets/logo.svg";
-import { Container, UncontrolledCarousel } from 'reactstrap';
+import { Carousel } from "flowbite-react";
 
 import Slider1 from '../assets/images/slider/1.jpg';
 import Slider2 from '../assets/images/slider/2.jpg';
@@ -11,45 +11,23 @@ export default function Home() {
   return (
     <React.Fragment>
       <div className="page-content">
-        <Container>
-          <div className='d-flex align-items-center justify-content-center'>
-            <img src={LOGO} alt="logo" height="70" className='m-2' />
-            <h1 className='my-auto text-info' height="70"  >3 ANGELS' CALL MINISTRY (3acm)</h1>
+      <div className='flex justify-center items-center'>
+            <img src={LOGO} alt="logo" className='m-2 h-16 inline' />
+            <h1 className='m-0 p-0 inline text-2xl font-bold text-violet-700'>3 ANGELS' CALL MINISTRY (3acm)</h1>
           </div>
-          <h2 className='text-center text-info'>Youth Volunteering for His cause in the Last Days</h2>
-
-          <div className='rounded'>
-            <UncontrolledCarousel className='rounded'
-              items={[
-                {
-                  altText: 'Slide 1',
-                  caption: 'Slide 1',
-                  key: 1,
-                  src: Slider1
-                },
-                {
-                  altText: 'Slide 2',
-                  caption: 'Slide 2',
-                  key: 2,
-                  src: Slider2
-                },
-                {
-                  altText: 'Slide 3',
-                  caption: 'Slide 3',
-                  key: 3,
-                  src: Slider3
-                },
-                {
-                  altText: 'Slide 4',
-                  caption: 'Slide 4',
-                  key: 4,
-                  src: Slider4
-                }
-              ]}
-            />
+          <div className="h-[520px] w-[1050px] flex justify-center items-center m-auto">
+            <Carousel>
+              <img src={Slider1} alt="..." />
+              <img src={Slider2} alt="..." />
+              <img src={Slider3} alt="..." />
+              <img src={Slider4} alt="..." />
+            </Carousel>
           </div>
 
-        </Container>
+          
+          <h2 className='text-center text-violet-900 font-bold hover:text-violet-400'>Youth Volunteering for His cause in the Last Days</h2>
+
+
       </div>
     </React.Fragment>
 

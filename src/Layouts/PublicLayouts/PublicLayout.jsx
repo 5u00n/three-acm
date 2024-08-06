@@ -5,11 +5,13 @@ import Footer from './Footer'
 function PublicLayout(props) {
     return (
         <React.Fragment>
-            <Header />
-            <div className="main-content mb-3">
+            <div className="flex flex-col min-h-screen">
+              <Header />
+              <div className="flex-grow main-content mb-3">
                 {props.children}
+              </div>
+              <Footer />
             </div>
-            <Footer />
         </React.Fragment>
     )
 }
