@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import logoSm from '../../assets/logo.svg';
 import { useState } from 'react';
 import { Navbar } from "flowbite-react";
@@ -11,20 +11,17 @@ function Header(args) {
   const toggle = () => setIsOpen(!isOpen);
 
   return (
-    <Navbar fluid rounded className='z-50 bg-purple-700'>
+    <Navbar fluid rounded className='z-50 bg-gradient-to-b from-purple-800 to-[#00000000] bg-transparent text-white'>
       <Navbar.Brand as={Link} href="/">
         <img src={logoSm} className="mr-3 h-6 sm:h-9" alt="Flowbite React Logo" />
-        <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">3ACM</span>
+        <span className="self-center whitespace-nowrap text-xl font-semibold ">3ACM</span>
       </Navbar.Brand>
       <Navbar.Toggle />
-      <Navbar.Collapse>
-        <Navbar.Link href="#" active>
-          Home
-        </Navbar.Link>
-        <Navbar.Link as={Link} href="#">
-          About
-        </Navbar.Link>
-        <Navbar.Link href="#">Contact</Navbar.Link>
+      <Navbar.Collapse className=' text-white'>
+        <NavLink to="/about" className='text-white'>About</NavLink>
+        <NavLink to="/contact" className='text-white'>Contact</NavLink>
+        <NavLink to="/mission-trips" className='text-white'>Mission Trips</NavLink>
+        <NavLink to="/projects" className='text-white'>Projects</NavLink>
       </Navbar.Collapse>
     </Navbar>
   )
